@@ -13,11 +13,13 @@ foreach($vars as $i)
 }
 if(isset($_GET['json']))
 {
+	//Output the data as json
 	header('Content-type: application/json');
 	echo json_encode($out);	
 }
 else
 {
+	//Output the data as html
 	echo '<pre>';
 	print_r($out);
 	echo '</pre>';
